@@ -10,10 +10,10 @@
                 /* display: block; */
                 display: inline;
             }
-            ul{
+            div>ul{
                 text-align: center;
             }
-            li{
+            div>ul>li{
                 display: inline-block;
                 border: solid black 1px;
                 padding: 5px;
@@ -21,19 +21,22 @@
                 width: 100px;
                 text-align: center;
             }
-            li>a{
+            div li>a{
                 text-decoration: none;
                 color: inherit;
             }
         </style>
     </head>
     <body>
-        <ul>
+        <div>
+            <ul>
             <li>Strona główna</li>
             <li><a href="https://tk.krakow.pl/">O szkole</a></li>
             <li>Dla klienta</li>
             <li><a href="http:\\onet.pl">Onet</a></li>
         </ul>
+        </div>
+        
         <center><div>Lorem DSFD D.</div></center>
         <div>Lorem <b>DSFD</b> D.</div>
         <div>Lorem DSFD D.</div>
@@ -41,5 +44,39 @@
         <p>dsfsd dsf sfs</p>
         <p>dsfsd dsf sfs</p>
         <p>dsfsd dsf sfs</p>
+        <ol type="1">
+        <li>Lista numerowana ...</li>
+        <li>Lista numerowana ...</li>
+        <ol type="a">
+            <li>Zagnieżdżona lista</li>
+            <li>Zagnieżdżona lista</li>
+            <ol type="i">
+                <li>Głębsze zagnieżdżenie</li>
+                <li>Głębsze zagnieżdżenie</li>
+                <li>Głębsze zagnieżdżenie</li>
+            </ol>
+            <li>Zagnieżdżona lista</li>
+            <li>Zagnieżdżona lista</li>
+        </ol>
+       <ul type="square">
+        <li>rr square</li>
+        <li>rr square</li>
+        <li>rr square</li>
+       </ul><hr>
+       <ul type="disc">
+        <li>rr disc</li>
+        <li>rr disc</li>
+        <li>rr disc</li>
+       </ul><hr>
+       <ul type="circle">
+        <li>rr circle</li>
+        <li>rr circle</li>
+        <li>rr circle</li>
+       </ul>
+       <ul style="list-style-type: circle;">
+        <li>rr circle</li>
+        <li>rr circle</li>
+        <li>rr circle</li>
+       </ul>
     </body>
 </html>
