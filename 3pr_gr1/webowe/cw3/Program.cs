@@ -12,6 +12,11 @@ string[] names = {"Adam","Roman","Edyta","Malina","ggggg","alina","marian","Anna
 // }
 // Console.WriteLine(HelloUpper(names));
 GetByFirstChar(names,"a");
+
+foreach(var elem in GetByFirstCharLinq(names,"m")){
+    Console.WriteLine($"LINQ: {elem}");
+}
+
 void Hello(string name){
     Console.WriteLine($"Hello {name} dzisiaj mamy {DateTime.Now.ToShortDateString()}");
 }
@@ -32,4 +37,7 @@ void GetByFirstChar(string[] data,string c){
             Console.WriteLine(elem);
         }
     }
+}
+List<string> GetByFirstCharLinq(string[] data,string c){
+    return data.Where((e) =>  e.ToLower().StartsWith(c.ToLower())).ToList();
 }
