@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8">
     <title>Ćwiczenie 2_2</title>
     <style>
-        table,td,th{
+        table,
+        td,
+        th {
             border: solid 1px grey;
         }
-        table{
+
+        table.t1 {
             width: 300px;
             margin: auto;
             text-align: center;
             border-collapse: collapse;
         }
-        td{
+
+        .t1 td {
             text-align: left;
             padding: 4px;
         }
-        td.first{
+
+        td.first {
             text-align: right;
         }
-        th{
+
+        .t1 th {
             background-color: lightgray;
             padding: 4px;
         }
-        tr:nth-child(odd){
+
+        .t1 tr:nth-child(odd) {
             background-color: lightgoldenrodyellow;
+        }
+
+        table.t2 {
+            border-collapse: collapse;
+        }
+
+        .t2 th {
+            background-color: lightgreen;
+        }
+
+        .t2 td,
+        .t2 th {
+            padding: 6px;
+        }
+
+        table.t2 {
+            border: solid 2px black;
+        }
+
+        .t2 thead {
+            border: solid 2px black;
+        }
+        tfoot{
+            font-size: 50%;
+            font-style: italic;
         }
     </style>
 </head>
+
 <body>
     <h1>Ćwiczenie 2_2</h1>
     <h2>Praca z tabelkami</h2>
     <h3>Wstęp</h3>
-    <table>
+    <table class="t1">
         <tr>
             <th>Lp</th>
             <th>Imię</th>
@@ -70,5 +104,53 @@
             <td>Eryk</td>
         </tr>
     </table>
+
+    <h3>Tabelka złożona</h3>
+    <table class="t2">
+        <thead>
+            <tr>
+                <th colspan="3">Dane osobowe</th>
+                <th rowspan="2">Pensja</th>
+            </tr>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Stanowisko</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Roman</td>
+                <td>Grocki</td>
+                <td>pracownik</td>
+                <td class="first">3000</td>
+            </tr>
+            <tr>
+                <td>Renata</td>
+                <td>Piekło</td>
+                <td>pracownik</td>
+                <td class="first">3200</td>
+            </tr>
+            <tr>
+                <td>Grażyna</td>
+                <td>Sprężyna</td>
+                <td>pracownik</td>
+                <td class="first">2600</td>
+            </tr>
+            <tr>
+                <td>Roman</td>
+                <td>Nowak</td>
+                <td>pracownik</td>
+                <td class="first">4500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Opracowano na podstawie....</td>
+            </tr>
+        </tfoot>
+    </table>
 </body>
+
 </html>
