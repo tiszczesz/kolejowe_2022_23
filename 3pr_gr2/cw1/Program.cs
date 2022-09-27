@@ -3,6 +3,8 @@
 ShowAll(names);
 Console.WriteLine(" =========================================");
 ShowAll(ShowOnlyStartWith(names,"t").ToArray());
+Console.WriteLine(" =========================================");
+ShowAll(ShowWithLinq(names,"t").ToArray());
 
 
 
@@ -20,5 +22,8 @@ List<string> ShowOnlyStartWith(string[] data,string c){
         }
     }
     return result;
+}
+List<string> ShowWithLinq(string[] data,string c){
+    return data.Where(e =>e.ToLower().StartsWith(c.ToLower())).ToList();
 }
 
