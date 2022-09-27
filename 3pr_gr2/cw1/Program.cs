@@ -5,6 +5,8 @@ Console.WriteLine(" =========================================");
 ShowAll(ShowOnlyStartWith(names,"t").ToArray());
 Console.WriteLine(" =========================================");
 ShowAll(ShowWithLinq(names,"t").ToArray());
+Console.WriteLine(" =========================================");
+ShowAll(names.Where(e=>e.ToLower().Contains("al".ToLower())).ToArray());
 
 
 
