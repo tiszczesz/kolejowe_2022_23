@@ -11,14 +11,14 @@
             padding: 5px;
         }
 
-        table {
+        table.tab1 {
             border-collapse: collapse;
             width: 100%;
             margin: auto;
             text-align: center;
         }
 
-        th {
+        .tab1 th {
             color: white;
             background-color: darkolivegreen;
         }
@@ -27,10 +27,11 @@
             text-align: left;
         }
 
-        tr:nth-child(odd) {
+        .tab1 tr:nth-child(odd) {
             background-color: rgb(221, 243, 189);
         }
-        td.first{
+
+        td.first {
             text-align: right;
         }
     </style>
@@ -39,7 +40,7 @@
 <body>
     <h1>Praca z tabelkami</h1>
     <div>
-        <table>
+        <table class="tab1">
             <tr>
                 <th>Lp</th>
                 <th>Kolumna 1</th>
@@ -70,6 +71,24 @@
                 <td>Komórka wiersz 4</td>
                 <td>Komórka wiersz 4</td>
             </tr>
+        </table>
+
+        <h2>Tabelka złożona</h2>
+        <table>
+            <tr>
+                <th colspan="3">Dane ucznia</th>
+                <th rowspan="2">Uwagi</th>
+            </tr>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Klasa</th>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
         </table>
     </div>
 </body>
