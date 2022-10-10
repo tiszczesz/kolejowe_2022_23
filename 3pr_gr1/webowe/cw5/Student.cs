@@ -1,6 +1,11 @@
 public class Student
 {
     private string firstName;
+    public string FirstName{
+        get{ return firstName.ToUpper();}
+        private set { firstName = value;}
+    }
+   
     private string lastName;
     private List<double> grades;
     public Student()
@@ -21,7 +26,7 @@ public class Student
     public override string ToString()
     {
         string allGrades = String.Join(" ", grades);
-        return $"{firstName}|{lastName}|{allGrades} srednia: {GetAVG()}";
+        return $"{FirstName}|{lastName}|{allGrades} srednia: "+ GetAVG().ToString("#.##");
     }
     public void AddGrade(double grade)
     {
