@@ -20,10 +20,10 @@ class Person {
     {
         return $"{firstName} {lastName} data urodzenia: {BirthDate} wiek: {GetAge()}";
     }
-    public int GetAge(){
-        if(BirthDate.HasValue){
-            return DateTime.Now.Year -  BirthDate.Value.Year;
-        }        
-        return 0;
+    public int? GetAge(){
+        
+            return BirthDate!=null ?  (DateTime.Now.Year -  BirthDate!.Value.Year):null;
+             
+       
     }
 }
