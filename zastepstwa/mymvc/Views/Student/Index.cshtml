@@ -1,0 +1,25 @@
+﻿@model List<Student>
+
+<div>
+	<table class="table table-bordered">
+		<tr>
+			<th>Lp</th>
+			<th>Imię</th>
+			<th>Nazwisko</th>
+		</tr>
+		@{
+			int i = 0;
+		}
+		@foreach (var s in Model)
+		{
+			
+				i++;
+			
+			<tr>
+				<td>@i</td>
+				<td>@s.Firstname</td>
+				<td>@s.Lastname</td>
+			</tr>
+		}
+	</table>
+</div>
