@@ -1,0 +1,15 @@
+dt:hover + dd{
+    opacity: 1;   
+}
+dd{
+    opacity: 0;
+    background-color: yellow;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    transition: opacity 2s;
+}
+dt{
+    font-size: 2em;
+    text-decoration: underline;
+}
