@@ -1,0 +1,35 @@
+* {
+    border: dotted 1px grey;
+    padding: 8px;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+li:hover{
+    background-color: rgb(236, 179, 110);
+}
+section{
+    background-color: lightpink;
+    float: left;
+    width: 48%;
+}
+header{
+    background-color: rgb(232, 219, 201);
+}
+article{
+    background-color: lightgrey;
+    clear: both;
+}
+footer{
+    background-color: blanchedalmond;
+    text-align: center;
+    padding-top: 10px;
+    clear: both;
+}
