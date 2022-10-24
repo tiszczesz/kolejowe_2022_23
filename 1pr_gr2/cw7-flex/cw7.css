@@ -1,0 +1,31 @@
+* {
+    border: solid 1px black;
+}
+header{
+    background-color: lightcyan;
+}
+section{
+   float: left;
+   width: 49%;
+}
+ol{
+    list-style: none;
+}
+li{
+    display: inline-block; 
+    width: 200px;  
+    padding: 8px; 
+}
+li:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+    padding-top: 10px;
+    clear: both;
+}
+article{
+    clear: both;
+    background-color: lightslategray;
+}
