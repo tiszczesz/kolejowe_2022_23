@@ -4,15 +4,20 @@
 header{
     background-color: lightcyan;
 }
+.container{
+    display: flex;
+}
 section{
-   float: left;
+  
    width: 49%;
 }
 ol{
     list-style: none;
+    display: flex;
+    
 }
 li{
-    display: inline-block; 
+   
     width: 200px;  
     padding: 8px; 
 }
@@ -23,9 +28,9 @@ li:hover{
 footer{
     text-align: center;
     padding-top: 10px;
-    clear: both;
+    
 }
 article{
-    clear: both;
+   
     background-color: lightslategray;
 }
