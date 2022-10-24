@@ -7,17 +7,14 @@ header{
 .container{
     display: flex;
 }
-section{
-  
+section{  
    width: 49%;
 }
 ol{
     list-style: none;
-    display: flex;
-    
+    display: flex;    
 }
-li{
-   
+li{   
     width: 200px;  
     padding: 8px; 
 }
