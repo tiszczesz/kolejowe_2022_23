@@ -1,0 +1,26 @@
+* {
+    border: solid 1px black;
+}
+header{
+    background-color: lightcyan;
+}
+section{
+    display: inline-block;
+    width: 49%;
+}
+ol{
+    list-style: none;
+}
+li{
+    display: inline-block; 
+    width: 200px;  
+    padding: 8px; 
+}
+li:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+    padding-top: 10px;
+}
