@@ -1,0 +1,23 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+@{
+    int a =12;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strona Razor Page i Index</h1>
+    <p>Dzisiaj mamy @DateTime.Now a = @a</p>
+    <ol>
+    @foreach (var u in Model.Users){
+        <li>@u</li>
+    }
+    </ol>
+</body>
+</html>
