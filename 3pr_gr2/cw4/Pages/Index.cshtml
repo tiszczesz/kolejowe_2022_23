@@ -1,0 +1,26 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1>Strona Index</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem qui nesciunt iusto, deserunt quos et modi commodi? Eius sapiente, deleniti ullam saepe adipisci debitis. Sint nihil nam amet! Enim, eum!</p>
+    <div>Aktualna data: @DateTime.Now</div>
+    <div>
+        <ol>
+            @foreach (var name in Model.Names){
+                <li>@name</li>
+            }
+            
+        </ol>
+    </div>
+    </body>
+</html>

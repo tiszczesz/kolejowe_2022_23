@@ -12,11 +12,13 @@ section{
 }
 ol{
     list-style: none;
-    display: flex;    
+    display: flex;  
+    padding: 0;  
 }
 li{   
-    width: 200px;  
-    padding: 8px; 
+   flex-grow: 4;
+    padding: 8px;
+    text-align: center; 
 }
 li:hover{
     background-color: lightgray;
