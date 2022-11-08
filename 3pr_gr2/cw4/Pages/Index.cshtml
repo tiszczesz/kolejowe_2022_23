@@ -1,6 +1,8 @@
 ﻿@page
 @model MyApp.Namespace.IndexModel
 @{
+    int s = 23;
+    string text = "sfsdfsfs";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +23,12 @@
             }
             
         </ol>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe minima asperiores natus suscipit cupiditate quam earum dolorum mollitia veritatis impedit consequuntur ratione recusandae, quisquam molestias eos nisi quidem doloremque repudiandae.</p>
+            text = @text
+        </div>
+        <div><a href="/Home">Do strony home</a></div>
+        <div>Inny spsób <a asp-page="Home">Do strony</a></div>
     </div>
     </body>
 </html>
