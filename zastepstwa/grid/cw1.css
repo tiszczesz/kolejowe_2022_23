@@ -1,0 +1,14 @@
+.container{
+    display:grid;
+    grid-template-columns:  140px  200px auto;
+    grid-template-rows: 100px auto;
+}
+div{
+    border: solid 1px black;
+    margin: 10px;
+}
+.elem5{
+    grid-column-start:2 ;
+    grid-column-end:third ;
+    background-color: lightcoral;
+}
