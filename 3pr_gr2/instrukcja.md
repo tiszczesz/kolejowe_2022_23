@@ -3,7 +3,7 @@
 
 dotnet new web -o NazwaProjektu
 ```
-# Możliwość obsługi plików stycnych
+# Możliwość obsługi zasobów statycznych
 1. Utworzyć katalog wwwroot
 2. Dodać do Program.cs
 ```csharp
