@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw9.css">
+    <title>Ćwiczenie 9</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formularze w gr.1 1PR</h1>
+        <!-- <ol>
+            <li>sdf dfs fsfsfs</li>
+            <li>sdf dfs fsfsfs</li>
+            <li>sdf dfs fsfsfs</li>
+            <li>sdf dfs fsfsfs</li>
+        </ol> -->
+        <form>
+            <fieldset>
+                <legend>Główne dane</legend>
+                <div class="line">
+                    <label for="login">Podaj login:</label>
+                    <input type="text" name="login" id="login">
+                </div>
+                <div class="line">
+                    <label for="password">Podaj hasło:</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="line">
+                    <label for="age">Podaj wiek:</label>
+                    <input type="number" name="age" step="1" id="age" min="13" max="25">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dane dodatkowe</legend>
+                <div class="line">
+                    <label for="division">Podaj klasę:</label>
+                    <select name="division" id="division">
+                        <option value="1A">1A</option>
+                        <option value="1B">1B</option>
+                        <option value="1C">1C</option>
+                        <option value="1D">1D</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <label for="mydate">Podaj datę przyjęcia:</label>
+                    <input type="date" name="mydate" id="mydate">
+                </div>
+                <div class="line">
+                    <label for="mycolor">Wybierz kolor:</label>
+                    <input type="color" name="mycolor" id="mycolor">
+                </div>
+                <div class="line">
+                    <label for="mypicture">Wybierz kolor:</label>
+                    <input type="file" name="mypicture" id="mypicture">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
