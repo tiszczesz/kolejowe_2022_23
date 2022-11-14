@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw9.css">
+    <title>Ćwiczenie 9</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formularze - wstęp</h1>
+        <form id="myform">
+            <fieldset>
+                <legend>Dane osobowe</legend>
+                <div class="line">
+                    <label for="firstname">Imię</label>
+                    <input type="text" name="firstname" id="firstname">
+                </div>
+                <div class="line">
+                    <label for="lastname">Nazwisko</label>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+                <div class="line">
+                    <label for="age">Wiek</label>
+                    <input type="number" name="age" id="age">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informacje dodatkowe</legend>
+                <div class="line">
+                    <label for="division">Wybierz klasę</label>
+                    <select name="division" id="division">
+                        <option value="default">Wybierz klasę</option>
+                        <option value="1A">1A</option>
+                        <option value="1B">1B</option>
+                        <option value="1C">1C</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <label for="mydate">Data rejestracji</label>
+                    <input type="date" name="mydate" id="mydate">
+                </div>
+                <div class="line">
+                    <label for="mycolor">Wybierz kolor</label>
+                    <input type="color" name="mycolor" id="mycolor">
+                </div>
+                <div class="line">
+                    <label for="myfile">Wyślij plik</label>
+                    <input type="file" name="myfile" id="myfile">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
