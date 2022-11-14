@@ -25,13 +25,14 @@ input[type=text]{
     border-bottom: 1px solid grey;
 }
 
-input[type=text]:hover {
+/* input[type=text]:hover {
     outline: none !important;
     border-width: 0px !important;
     border: none !important;
-  }
+  } */
   input[type=text]:focus {
     outline: none !important;
-    border-width: 0px !important;
-    border: none !important;
+    /* border-width: 0px !important;
+    border: none !important; */
+    border-bottom: 1px solid grey;
   }
