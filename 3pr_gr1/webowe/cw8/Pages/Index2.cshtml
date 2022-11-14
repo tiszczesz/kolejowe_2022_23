@@ -6,11 +6,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/index.css">
     <title>Document</title>
 </head>
 <body>
     <div>Imię: @Model.FirstName</div>
     <div>Nazwisko: @Model.LastName</div>
     <div>Wiek: @Model.GetAge()</div>
+    <div><a asp-page="Index">Powrót</a></div>
+    <h3 id="info"></h3>
+    <div>
+        <img src="~/media/motylek2.jpg" alt="motylek">
+    </div>
+    <script src="~/js/s1.js" defer></script>
 </body>
 </html>
