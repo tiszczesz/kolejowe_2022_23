@@ -10,6 +10,28 @@ label{
     text-align: right;
     margin-right: 5px;
 }
-form{
-    display: flex;
+
+input[type=button]{
+    padding: 8px;
+    width: 120px;
+}
+input[type=text]{
+    border: none;
+    border-bottom: 1px grey dotted;
+}
+input[type=text]:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px grey dotted;
+}
+button{
+    margin: 20px;
+    margin-left: 200px;
+    padding: 8px;
+    width: 120px;
+}
+img.icon{
+    float: right;
+    width: 15px;
+    height: 15px;
 }
