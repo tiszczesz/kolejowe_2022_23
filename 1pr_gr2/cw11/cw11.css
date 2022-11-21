@@ -1,0 +1,26 @@
+div{
+    margin-bottom: 20px;
+}
+div::first-letter{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+div:nth-child(2){
+    background-color: red;
+}
+div:nth-child(5){
+    font-style: italic;
+}
+div>div{
+    margin-left: 30px;
+}
+div:nth-child(1){
+    text-decoration: underline;
+}
+div:nth-child(even){
+    border: solid black;
+}
+div:last-child{
+    width: 100vw;
+    color: yellow;
+}
