@@ -1,0 +1,42 @@
+div{
+    margin: 20px;
+}
+div>div{
+    margin-left: 30px;
+}
+div>div>div{
+    margin-left:60px
+}
+div:nth-child(2){
+    background-color: grey;
+}
+div:last-child{
+    color: red;
+}
+div:nth-child(even){
+    border: solid 3px green;
+}
+div::first-letter{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+div>div::before{
+    content: url("smile.png");
+}
+div:nth-child(odd)::first-line{
+    text-decoration: underline;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+td{
+    padding: 10px;
+    border: solid 1px black;
+}
+tr:nth-child(even){
+    background-color: lightblue;
+}
+tr:hover{
+    background-color: yellow;
+}
