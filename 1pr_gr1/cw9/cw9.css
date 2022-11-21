@@ -16,7 +16,7 @@ label{
     text-align: right;
     margin-right: 5px;
 }
-input[type=button]{
+input[type=button], button{
     width: 180px;
     padding: 10px;
 }
@@ -35,4 +35,9 @@ input[type=text]{
     /* border-width: 0px !important;
     border: none !important; */
     border-bottom: 1px solid grey;
+  }
+  .icon{
+    width: 18px;
+    height: 18px;
+    float: right;
   }
