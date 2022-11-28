@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1669106809 source:c:\users\pszczesz\documents\github\kolejowe_2022_23\zastepstwa\cpp1\cpp1\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<cstdlib>
+
