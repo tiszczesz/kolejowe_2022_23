@@ -8,5 +8,11 @@ namespace WebRazorPageGames.Pages
         public void OnGet()
         {
         }
+        public void OnPost()
+        {
+            var req = Request;
+            var form = Request.Form;
+            ViewData["post"] = true;
+        }
     }
 }
