@@ -1,0 +1,22 @@
+﻿@page
+@model WebRazorPageGames.Pages.MyPageModel
+@{
+}
+<form method="post">
+    <div class="row m-2">
+        <label for="title" class="col-3 ">Tytuł: </label>
+        <input class="col-6" name="title" id="title" type="text" />
+    </div>
+    <div class="row m-2">
+        <label for="category" class="col-3">Kategoria: </label>
+        <input class="col-6" name="category" id="category" type="text" />
+    </div>
+    <div class="row m-2">
+        <label for="releaseDate" class="col-3">Data wydania: </label>
+        <input class="col-6" name="releaseDate" id="releaseDate" type="date" />
+    </div>
+    <div class="row m-2">
+
+        <input class="col-6 offset-3" value="Zapisz" type="submit" />
+    </div>
+</form>
