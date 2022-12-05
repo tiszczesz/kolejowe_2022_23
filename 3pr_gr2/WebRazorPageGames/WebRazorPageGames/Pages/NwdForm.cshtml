@@ -1,0 +1,33 @@
+﻿@page
+@model WebRazorPageGames.Pages.NwdFormModel
+@{
+}
+<form method="post">
+
+	<div class="row m-2">
+		<label class="col-1" for="a">a = </label >
+		<input type="number" min="0" name="a" id="a" class="col-6 offset-1" />
+		<span class="error"></span>
+	</div>
+	<div class="row m-2">
+		<label class="col-1" for="b">b = </label>
+		<input type="number" min="0" name="b" id="b"  class="col-6 offset-1"/>
+		<span class="error"></span>
+	</div>
+	<div class="row m-2">
+		<label class="col-1" for="b">metoda: </label>
+		<select name="wybor" class=" col-6 offset-1">
+			<option value="rec">Rekurencyjnie</option>
+			<option value="iter">Iteracyjnie</option>
+		</select>
+	</div>
+	
+
+	<div class="row">
+		<input type="submit" value="Oblicz" class="offset-1 btn btn-primary"/>
+	</div>
+</form>
+
+@if(ViewData["post"]!=null){
+	<div>@ViewData["result"]</div>
+}
