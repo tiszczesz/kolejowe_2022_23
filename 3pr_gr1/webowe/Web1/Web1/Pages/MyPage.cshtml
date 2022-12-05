@@ -1,9 +1,34 @@
 ﻿@page
 @model Web1.Pages.MyPageModel
-@{
-}
+
 <div>
 	<h1>Moja strona</h1>
+
+	<table class="table table-bordered">
+		<tr>
+			<th>Lp</th>
+			<th>Imię</th>
+			<th>Nazwisko</th>
+			<th>Email</th>
+			<th>Telefon</th>
+		</tr>
+		@{int lp = 0;}
+		@foreach (var item in Model.Contacts){
+			lp++;
+			<tr>
+
+				<td>@lp</td>
+				<td>@item.Firstname</td>
+				<td>@item.Lastname</td>
+				<td>@item.Email</td>
+				<td>@item.PhoneNumber</td>
+
+			</tr>
+		}
+	 
+
+
+	</table>
 </div>
 
 

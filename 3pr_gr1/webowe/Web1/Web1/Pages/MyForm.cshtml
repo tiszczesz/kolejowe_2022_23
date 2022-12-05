@@ -1,0 +1,24 @@
+﻿@page
+@model Web1.Pages.MyFormModel
+@{
+}
+
+<form method="post">
+	<div class="row m-2">
+		<label for="firstname">Podaj imię</label>
+		<input type="text" name="firstname" id="firstname" />
+	</div>
+	<div class="row m-2">
+		<label for="lastname">Podaj nazwisko</label>
+		<input type="text" name="lastname" id="lastname" />
+	</div>
+	<div class="row m-2">
+		
+		<input class="btn btn-primary w-100" type="submit" name="submit" id="submit" value="Zapisz" />
+	</div>
+</form>
+@if(ViewData["post"]!=null ){
+	<div>Wynik formularza</div>
+	<p>Twoje imię: @ViewData["firstname"]</p>
+	<p>Twoje nazwisko: @ViewData["lastname"]</p>
+}
