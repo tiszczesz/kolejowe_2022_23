@@ -9,10 +9,12 @@ namespace WebRazorPageGames.Pages
         {
         }
         public void OnPost()
-        {
-            var req = Request;
-            var form = Request.Form;
+        {            
+
             ViewData["post"] = true;
+            ViewData["title"] = Request.Form["title"];
+            ViewData["category"] = Request.Form["category"];
+            ViewData["releaseDate"] = Request.Form["releaseDate"];
         }
     }
 }
