@@ -11,7 +11,7 @@ namespace Web1.Pages
         }
         public void OnPost()
         {
-            int a = 12;
+            int a = 30;
             int b = 45;
             int result = NWD.NWDRec(a, b);
             var ff = Request.Form;
