@@ -5,7 +5,7 @@
 header {
     border: solid 2px grey;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: black;
 }
 
