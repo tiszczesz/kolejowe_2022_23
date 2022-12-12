@@ -1,0 +1,51 @@
+.container {
+    margin: 0 20px;
+}
+
+header {
+    border: solid 2px grey;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.header {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.menu{
+    margin-right: 40px;
+}
+header img {
+    height: 200px;
+}
+
+ul {
+    list-style: none;
+    width: 250px;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 10px;
+    height: 30px;
+    width: 100%;
+    border: solid rgb(188, 172, 165) 1px;
+}
+.menu a:hover {
+    background-color: rgb(213, 236, 213);
+}
+main{
+    display: flex;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+}
