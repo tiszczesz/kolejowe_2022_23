@@ -25,6 +25,8 @@ header img {
 ul {
     list-style: none;
     width: 250px;
+    padding: 0;
+    margin: 0;
 }
 
 li {
@@ -38,6 +40,9 @@ li {
     height: 30px;
     width: 100%;
     border: solid rgb(188, 172, 165) 1px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
 }
 .menu a:hover {
     background-color: rgb(213, 236, 213);
