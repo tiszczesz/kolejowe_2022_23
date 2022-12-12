@@ -1,0 +1,25 @@
+.container{margin: 0 30px;}
+header{display: flex; justify-content: space-between;
+border: solid 1px black;}
+header img{height: 200px;}
+header>div{font-size: 4rem;text-transform: uppercase;margin-top: 60px;}
+footer{display: flex;justify-content: space-around;height: 30px;
+    background-color: black;color:white;}
+main{display:flex;}
+nav{width: 200px;}
+nav>ul{padding: 0; margin: 0; list-style: none;}
+nav li{padding: 0; margin: 0; height: 40px;}
+nav a{
+    text-decoration: none;
+    color: black;
+    display:inline-block;
+    
+    font-size: 1.2rem;
+    text-align: center;
+    border: solid 1px rgb(63, 63, 62);
+    width: 200px;
+    height: 100%;
+}
+nav a:hover{
+    background-color: rgb(199, 202, 190);
+}
