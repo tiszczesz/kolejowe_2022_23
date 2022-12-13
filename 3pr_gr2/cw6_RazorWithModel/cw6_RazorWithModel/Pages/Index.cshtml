@@ -8,3 +8,20 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<h3>Zbiór książek</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>Data wydania</th>
+    </tr>
+    @foreach(var b in Model.Repo.Books){
+        <tr>
+            <td>@b.Id</td>
+            <td>@b.Title</td>
+            <td>@b.Author</td>
+            <td>@b.Date.ToShortDateString()</td>
+        </tr>
+    }
+</table>
