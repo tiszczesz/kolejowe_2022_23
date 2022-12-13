@@ -4,16 +4,23 @@
 }
 <form method="post">
     <div class="row">
-        <label asp-for="MyBook.Title" class="col-4"></label>
-        <input asp-for="MyBook.Title" class="col-8"/>
+        <label asp-for="@Model.MyBook.Title" class="col-4"></label>
+        <input asp-for="@Model.MyBook.Title" class="col-8" />
     </div>
     <div class="row">
-        <label asp-for="MyBook.Author" class="col-4"></label>
-        <input asp-for="MyBook.Author" class="col-8" />
+        <label asp-for="@Model.MyBook.Author" class="col-4"></label>
+        <input asp-for="@Model.MyBook.Author" class="col-8" />
     </div>
     <div class="row">
-        <label asp-for="MyBook.Date" class="col-4"></label>
-        <input asp-for="MyBook.Date" class="col-8" />
+        
+        <label asp-for="@Model.MyBook.Date" class="col-4"></label>
+        <input asp-for="@Model.MyBook.Date" class="col-8" />
     </div>
     <input type="submit" value="Dodaj" class="btn btn-primary"/>
 </form>
+
+@if(ViewData["post"]!=null){
+    <p>Tytuł książki: @Model.MyBook.Title</p>
+    <p>Autor książki: @Model.MyBook.Author</p>
+    <p>Data wydania książki: @Model.MyBook.Date.ToShortDateString()</p>
+}

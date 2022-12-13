@@ -1,6 +1,7 @@
 ﻿
 
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace cw6_RazorWithModel.Models
 {
@@ -14,6 +15,7 @@ namespace cw6_RazorWithModel.Models
         public string Author { get; set; }
 
         [DisplayName("Data wydania")]
-        public DateTime Date { get; set; }
+        [DataType(DataType.Date)]
+        public DateOnly Date { get; set; }
     }
 }

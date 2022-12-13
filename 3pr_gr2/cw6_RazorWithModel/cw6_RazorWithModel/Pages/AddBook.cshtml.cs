@@ -6,14 +6,17 @@ namespace cw6_RazorWithModel.Pages
 {
     public class AddBookModel : PageModel
     {
+        [BindProperty]
         public Book  MyBook { get; set; }
         public void OnGet()
         {
             MyBook = new Book();
+            
         }
         public void OnPost()
         {
             ViewData["post"] = true;
+            var gg = MyBook;
         }
     }
 }
