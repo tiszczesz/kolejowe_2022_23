@@ -3,13 +3,16 @@
 @{
 }
 <form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
     <div class="row">
         <label asp-for="@Model.MyBook.Title" class="col-4"></label>
         <input asp-for="@Model.MyBook.Title" class="col-8" />
+        
     </div>
     <div class="row">
         <label asp-for="@Model.MyBook.Author" class="col-4"></label>
         <input asp-for="@Model.MyBook.Author" class="col-8" />
+        
     </div>
     <div class="row">
         
