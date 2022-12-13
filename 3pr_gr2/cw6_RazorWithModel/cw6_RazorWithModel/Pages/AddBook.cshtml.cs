@@ -13,10 +13,14 @@ namespace cw6_RazorWithModel.Pages
             MyBook = new Book();
             
         }
-        public void OnPost()
+        public IActionResult OnPost()
         {
-            ViewData["post"] = true;
-            var gg = MyBook;
+            if (ModelState.IsValid)
+            {
+                ViewData["post"] = true;
+                return new RedirectToPageResult("Index");
+            }
+            return Page();
         }
     }
 }
