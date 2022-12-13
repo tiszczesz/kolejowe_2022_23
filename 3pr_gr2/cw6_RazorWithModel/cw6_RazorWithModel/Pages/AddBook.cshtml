@@ -1,0 +1,19 @@
+﻿@page
+@model cw6_RazorWithModel.Pages.AddBookModel
+@{
+}
+<form method="post">
+    <div class="row">
+        <label asp-for="MyBook.Title" class="col-4"></label>
+        <input asp-for="MyBook.Title" class="col-8"/>
+    </div>
+    <div class="row">
+        <label asp-for="MyBook.Author" class="col-4"></label>
+        <input asp-for="MyBook.Author" class="col-8" />
+    </div>
+    <div class="row">
+        <label asp-for="MyBook.Date" class="col-4"></label>
+        <input asp-for="MyBook.Date" class="col-8" />
+    </div>
+    <input type="submit" value="Dodaj" class="btn btn-primary"/>
+</form>
