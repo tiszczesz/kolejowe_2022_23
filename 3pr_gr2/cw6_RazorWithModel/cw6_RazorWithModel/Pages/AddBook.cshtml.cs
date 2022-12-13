@@ -6,6 +6,11 @@ namespace cw6_RazorWithModel.Pages
 {
     public class AddBookModel : PageModel
     {
+        private RepoBooks _repo;
+        public AddBookModel()
+        {
+            _repo = new RepoBooks();
+        }
         [BindProperty]
         public Book  MyBook { get; set; }
         public void OnGet()
@@ -17,7 +22,8 @@ namespace cw6_RazorWithModel.Pages
         {
             if (ModelState.IsValid)
             {
-                ViewData["post"] = true;
+                
+                _repo.SaveToFile("books.txt",MyBook);
                 return new RedirectToPageResult("Index");
             }
             return Page();

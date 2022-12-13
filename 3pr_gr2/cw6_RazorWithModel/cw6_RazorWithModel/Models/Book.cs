@@ -20,6 +20,6 @@ namespace cw6_RazorWithModel.Models
         [DisplayName("Data wydania")]
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Proszę wybrać datę wydania")]
-        public DateOnly Date { get; set; }
+        public DateTime Date { get; set; }
     }
 }
