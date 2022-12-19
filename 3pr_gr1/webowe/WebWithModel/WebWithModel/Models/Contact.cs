@@ -9,7 +9,8 @@ namespace WebWithModel.Models
 
 		[DisplayName("Podaj imię")]
 		[Required(ErrorMessage = "Musisz podać imię")]
-		public string FirstName { get; set; }
+        [RegularExpression(@"^[A-ZŁŻŹ]+[a-zśćńółżźąęA-ZŻŻÓŁŃĘĄŚĆ\s]*$",ErrorMessage ="Niepoprawne imię")]
+        public string FirstName { get; set; }
 
 		[DisplayName("Podaj nazwisko")]
 		[Required(ErrorMessage = "Musisz podać nazwisko")]
