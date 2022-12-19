@@ -24,7 +24,8 @@
             <td>@b.Author</td>
             <td>@b.Date.ToShortDateString()</td>
             <td>
-                <a class="btn btn-dark" asp-page="DeleteBook" asp-route-id="@b.Id">Usuń książkę</a>
+                <a class="btn btn-dark" asp-page="DeleteBook" 
+                asp-route-id="@b.Id">Usuń książkę</a>
             </td>
         </tr>
     }

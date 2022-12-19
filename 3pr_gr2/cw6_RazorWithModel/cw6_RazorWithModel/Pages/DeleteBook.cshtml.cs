@@ -5,8 +5,9 @@ namespace cw6_RazorWithModel.Pages
 {
     public class DeleteBookModel : PageModel
     {
-        public void OnGet()
+        public void OnGet(int? id)
         {
+            var b = id;
         }
     }
 }
