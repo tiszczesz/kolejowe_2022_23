@@ -29,7 +29,12 @@
             if (File.Exists(filename))
             {
                 if (Books == null) Books = new List<Book>();
-                result = File.ReadAllLines(filename).ToList(); 
+                result = File.ReadAllLines(filename).ToList();
+                if (result.Count == 0)
+                {
+                    LastId = 0;
+                    return;
+                }
                 foreach (string line in result)
                 {
                     Book b = lineToBook(line);
