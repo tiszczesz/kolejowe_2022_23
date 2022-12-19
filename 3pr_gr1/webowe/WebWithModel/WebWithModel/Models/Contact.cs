@@ -23,6 +23,7 @@ namespace WebWithModel.Models
 
 		[DisplayName("Podaj adres email")]
 		[Required(ErrorMessage = "Musisz podać email")]
+		[RegularExpression("^\\S+@\\S+\\.\\S+$",ErrorMessage ="Błędny email")]
 		public string Email { get; set; }
 	}
 }

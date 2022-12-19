@@ -4,26 +4,30 @@
 }
 <form method="post">
 	<div class="row m-2">
-		<label class="col-4" asp-for="MyContact.FirstName"></label>
-		<input class="col-8" asp-for="MyContact.FirstName" />
+		<label class="col-3" asp-for="MyContact.FirstName"></label>
+		<input class="col-6" asp-for="MyContact.FirstName" />
+		<span class="text-danger col-3" asp-validation-for="MyContact.FirstName"></span>
 	</div>
 	<div class="row m-2">
-		<label class="col-4" asp-for="MyContact.LastName"></label>
-		<input class="col-8" asp-for="MyContact.LastName" />
+		<label class="col-3" asp-for="MyContact.LastName"></label>
+		<input class="col-6" asp-for="MyContact.LastName" />
+		<span class="text-danger col-3" asp-validation-for="MyContact.LastName"></span>
 	</div>
 	<div class="row m-2">
-		<label class="col-4" asp-for="MyContact.Phone"></label>
-		<input class="col-8" asp-for="MyContact.Phone" />
+		<label class="col-3" asp-for="MyContact.Phone"></label>
+		<input class="col-6" asp-for="MyContact.Phone" />
+		<span class="text-danger col-3" asp-validation-for="MyContact.Phone"></span>
 	</div>
 	<div class="row m-2">
-		<label class="col-4" asp-for="MyContact.Email"></label>
-		<input class="col-8" asp-for="MyContact.Email" />
+		<label class="col-3" asp-for="MyContact.Email"></label>
+		<input class="col-6" asp-for="MyContact.Email" />
+		<span class="text-danger col-3" asp-validation-for="MyContact.Email"></span>
 	</div>
 	<div class="row m-2">
 		<input type="submit" 
-			class="btn btn-primary offset-4 col-8 p-2" value="Zapisz"/>
+			class="btn btn-primary offset-3 col-6 p-2" value="Zapisz"/>
 	</div>
-	<div class="alert-danger" asp-validation-summary="All"></div>
+	<div class="text-danger" asp-validation-summary="All"></div>
 </form>
 
 
