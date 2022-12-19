@@ -31,6 +31,7 @@
             else
             {
                 result = new List<string>();
+                Books = new List<Book>();
                 LastId = 0;
             }
                       

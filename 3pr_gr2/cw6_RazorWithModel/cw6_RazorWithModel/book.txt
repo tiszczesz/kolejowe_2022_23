@@ -1,4 +1,1 @@
-1|ABC C++|Antoni Bałecki|12.12.2021
-2|Nowa fajna|Sdsdsds Ryrrtrt|09.09.1999
-3|Mała wyprawa|Franek Dzbanek|07.12.2002
-4|dfff|ddffdf|21.12.2009
+1|Nowa 2022|ddffdf|12.12.2008
