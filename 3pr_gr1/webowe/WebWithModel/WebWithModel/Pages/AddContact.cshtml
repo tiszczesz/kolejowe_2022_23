@@ -1,0 +1,27 @@
+﻿@page
+@model WebWithModel.Pages.AddContactModel
+@{
+}
+<form method="post">
+	<div class="row m-2">
+		<label class="col-4" asp-for="MyContact.FirstName"></label>
+		<input class="col-8" asp-for="MyContact.FirstName" />
+	</div>
+	<div class="row m-2">
+		<label class="col-4" asp-for="MyContact.LastName"></label>
+		<input class="col-8" asp-for="MyContact.LastName" />
+	</div>
+	<div class="row m-2">
+		<label class="col-4" asp-for="MyContact.Phone"></label>
+		<input class="col-8" asp-for="MyContact.Phone" />
+	</div>
+	<div class="row m-2">
+		<label class="col-4" asp-for="MyContact.Email"></label>
+		<input class="col-8" asp-for="MyContact.Email" />
+	</div>
+	<div class="row m-2">
+		<input type="submit" 
+			class="btn btn-primary offset-4 col-8 p-2" value="Zapisz"/>
+	</div>
+	<div class="alert-danger" asp-validation-summary="All"></div>
+</form>

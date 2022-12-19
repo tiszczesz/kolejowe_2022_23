@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            Imię
+        </th>
+        <th>
+            Nazwisko
+        </th>
+       
+        <th>
+            Telefon
+        </th>
+        <th>
+            Adres email
+        </th>
+    </tr>
+    @foreach(var c in Model.Repo.Contacts)
+    {
+        <tr>
+            <td>@c.FirstName</td>
+            <td>@c.LastName</td>
+            <td>@c.Phone</td>
+            <td>@c.Email</td>
+        </tr>
+    }
+</table>
+
