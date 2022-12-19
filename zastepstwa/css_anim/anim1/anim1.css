@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appearFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+    border-radius: 50px;
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  80% {
+    transform: rotate(45deg);
+    border-radius: 0;
+  }
+
+  100% {
+    transform: rotate(45deg) scaleX(5);
+  }
+}
+
+@keyframes appearFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+    border-radius: 50px;
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  80% {
+    transform: rotate(-45deg);
+    border-radius: 0;
+  }
+
+  100% {
+    transform: rotate(-45deg) scaleX(5);
+  }
+}
+
+.box {
+  width: 90px;
+  height: 90px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: background-color 0.25s 0.25s ease-in-out;
+}
+
+.box--from-top {
+  animation: appearFromTop 3s 0.5s both;
+}
+
+.box--from-bottom {
+  animation: appearFromBottom 3s 0.5s both;
+}
+
+.dot {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  border-radius: 50px;
+  border: none;
+  animation: appear 1.5s 4.5s ease-in-out both;
+  transition: background-color 0.25s 0.1s ease-in-out;
+}
+
+.dot::after {
+  content: "";
+  width: 38px;
+  height: 38px;
+  border: 4px solid black;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.dot:hover::after {
+  opacity: 0;
+}
+
+.dot--left {
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dot--left:hover {
+  background-color: hsl(244, 100%, 55%);
+}
+
+.dot--left:hover~.box {
+  background-color: hsl(244, 100%, 55%);
+}
+
+.dot--right {
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dot--right:hover {
+  background-color: hsl(344, 100%, 55%);
+}
+
+.dot--right:hover~.box {
+  background-color: hsl(344, 100%, 55%);
+}
+
+.dot--top {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot--top:hover {
+  background-color: hsl(44, 100%, 55%);
+}
+
+.dot--top:hover~.box {
+  background-color: hsl(44, 100%, 55%);
+}
+
+.dot--bottom {
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot--bottom:hover {
+  background-color: hsl(144, 100%, 55%);
+}
+
+.dot--bottom:hover~.box {
+  background-color: hsl(144, 100%, 55%);
+}

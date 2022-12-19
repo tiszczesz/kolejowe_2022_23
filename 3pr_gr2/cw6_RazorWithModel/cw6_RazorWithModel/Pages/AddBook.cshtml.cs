@@ -23,7 +23,9 @@ namespace cw6_RazorWithModel.Pages
             if (ModelState.IsValid)
             {
                 MyBook.Id = _repo.LastId + 1;
-                _repo.SaveToFile(MyBook);
+                //  _repo.SaveToFile(MyBook);
+                _repo.Books.Add(MyBook);
+                _repo.SaveAll();
                 return new RedirectToPageResult("Index");
             }
             return Page();
