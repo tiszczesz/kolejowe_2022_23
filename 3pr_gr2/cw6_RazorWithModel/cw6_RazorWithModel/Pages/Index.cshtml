@@ -15,6 +15,7 @@
         <th>Tytuł</th>
         <th>Autor</th>
         <th>Data wydania</th>
+        <th>Operacje</th>
     </tr>
     @foreach(var b in Model.Repo.Books){
         <tr>
@@ -22,6 +23,9 @@
             <td>@b.Title</td>
             <td>@b.Author</td>
             <td>@b.Date.ToShortDateString()</td>
+            <td>
+                <a class="btn btn-dark" asp-page="DeleteBook" asp-route-id="@b.Id">Usuń książkę</a>
+            </td>
         </tr>
     }
 </table>

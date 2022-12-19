@@ -14,6 +14,15 @@
             file.WriteLine($"{book.Id}|{book.Title}|{book.Author}|{book.Date.ToShortDateString()}");
             file.Close();
         }
+        public void SaveAll(string fileName = "book.txt")
+        {
+            List<string> result = new List<string>();
+            foreach(var book in Books)
+            {
+                result.Add($"{book.Id}|{book.Title}|{book.Author}|{book.Date.ToShortDateString()}");
+            }
+            File.WriteAllLines(fileName, result);
+        }
         public void LoadFromFile(string filename = "book.txt")
         {
             List<string> result = new List<string>();
