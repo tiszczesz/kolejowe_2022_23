@@ -44,4 +44,6 @@ footer{
     height: 30px;
     position: fixed;
     bottom: 0;
+    margin: auto;
+    text-align: center;
 }
