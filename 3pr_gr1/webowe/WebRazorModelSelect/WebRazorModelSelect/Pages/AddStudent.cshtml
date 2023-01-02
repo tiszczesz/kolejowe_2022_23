@@ -1,0 +1,43 @@
+﻿@page
+@model WebRazorModelSelect.Pages.AddStudentModel
+@{
+}
+<form method="post">
+	<div class="row m-2">
+		<label class="col-2" asp-for="@Model.MyStudent.FirstName"></label>
+		<input class="col-4" asp-for="@Model.MyStudent.FirstName" />
+		<span class="text-danger col-4" asp-validation-for="@Model.MyStudent.FirstName"></span>
+	</div>
+	<div class="row m-2">
+		<label class="col-2" asp-for="@Model.MyStudent.LastName"></label>
+		<input class="col-4" asp-for="@Model.MyStudent.LastName" />
+		<span class="text-danger col-4" asp-validation-for="@Model.MyStudent.LastName"></span>
+	</div>
+	<div class="row m-2">
+		<label class="col-2" asp-for="@Model.MyStudent.Division"></label>
+		<select class="col-4" asp-for="@Model.MyStudent.Division">
+			@foreach (var elem in Model.Divisions)
+			{
+				<option value="@elem">@elem</option>
+			}
+		</select>
+	</div>
+	<div class="row m-2">
+		<label class="col-2" asp-for="@Model.MyStudent.Division"></label>
+		<select class="col-4" asp-for="@Model.MyStudent.Division"
+				asp-items="@Model.Divisions2">
+			
+		</select>
+	</div>
+	<div class="row m-2 offset-2">
+		<input class="btn btn-primary" type="submit" value="Zapisz"/>
+	</div>
+</form>
+
+@if(ViewData["success"]!=null )
+{
+	<div>
+		Zapisano: @Model.MyStudent.FirstName @Model.MyStudent.LastName do klasy: 
+		@Model.MyStudent.Division
+	</div>
+}
