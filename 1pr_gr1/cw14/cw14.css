@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 main{
+    /* position: relative; */
     border: solid 1px blue;
     width: 500px;
     height: 500px;
@@ -13,12 +14,26 @@ section{
     height: 100px;
 }
 .s1{
-    position: relative;
-    left: 150px;
-    top: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
     background-color: lightcoral;
 }
 .s2{
-    position: relative;
-    top: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lightblue;
+}
+.s3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(229, 227, 114);
+}
+.s4{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(92, 176, 224);
 }
