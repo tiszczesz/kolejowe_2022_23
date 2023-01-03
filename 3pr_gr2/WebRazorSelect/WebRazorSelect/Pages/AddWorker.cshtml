@@ -1,0 +1,36 @@
+﻿@page
+@model WebRazorSelect.Pages.AddWorkerModel
+@{
+}
+<h1>Dodaj pracownika</h1>
+<form method="post">
+    <div class="row m-2">
+        <label class="col-2" asp-for="@Model.MyWorker.FirstName"></label>
+        <input class="col-4" asp-for="@Model.MyWorker.FirstName"/>
+        <span class="text-danger col-6" asp-validation-for="@Model.MyWorker.FirstName"></span>
+    </div>
+     <div class="row m-2">
+        <label class="col-2" asp-for="@Model.MyWorker.LastName"></label>
+        <input class="col-4" asp-for="@Model.MyWorker.LastName"/>
+        <span class="text-danger col-6" asp-validation-for="@Model.MyWorker.LastName"></span>
+    </div>
+     <div class="row m-2">
+        <label class="col-2" asp-for="@Model.MyWorker.Workplace"></label>
+        <select asp-for="@Model.MyWorker.Workplace" class="col-4">
+            @foreach (var elem in Model.WorkerPlaces)
+            {
+                <option value="@elem">@elem</option>
+            }
+        </select>
+    </div>
+    <div class="row m-2">
+        <label class="col-2" asp-for="@Model.MyWorker.Salary"></label>
+        <input type="number" class="col-4" asp-for="@Model.MyWorker.Salary"/>
+        <span class="text-danger col-6" asp-validation-for="@Model.MyWorker.Salary"></span>
+    </div>
+     <div class="row m-2">
+        
+        <input type="submit" class="offset-2 col-6 btn btn-primary" value="Dodaj"/>
+        
+    </div>
+</form>
