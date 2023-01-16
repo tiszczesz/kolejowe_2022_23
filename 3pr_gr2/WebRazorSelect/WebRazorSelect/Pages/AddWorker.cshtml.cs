@@ -21,6 +21,7 @@ namespace WebRazorSelect.Pages
         }
         public void OnPost()
         {
+            ViewData["post"] = true;
             if (ModelState.IsValid)
             {
                 var result = MyWorker;

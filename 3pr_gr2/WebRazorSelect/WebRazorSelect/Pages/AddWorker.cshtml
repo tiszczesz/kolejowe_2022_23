@@ -35,9 +35,9 @@
     </div>
 </form>
 
-@if(ViewDate["post"]!=null){
+@if(ViewData["post"]!=null){
     <div>
             Przyjęto nowego pracownika: @Model.MyWorker.FirstName @Model.MyWorker.LastName
-            na stanowisko @Model.MyWorker.WorkPlace z pensją: @Model.MyWorker.Salary
+            na stanowisko @Model.MyWorker.Workplace z pensją: @Model.MyWorker.Salary
     </div>
 }
