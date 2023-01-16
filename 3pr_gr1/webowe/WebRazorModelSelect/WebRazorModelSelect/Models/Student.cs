@@ -21,5 +21,10 @@ namespace WebRazorModelSelect.Models
 		[DisplayName("Wybierz klasę")]
 		public string Division { get; set; }
 
+		[DisplayName("Płeć")]
+		public string Gender { get; set; } = "Kobieta";
+
+		[DisplayName("Zainteresowania")]
+		public List<CheckItem> Hobbies { get; set; }
 	}
 }

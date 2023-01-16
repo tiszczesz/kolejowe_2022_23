@@ -13,15 +13,18 @@
 		<input class="col-4" asp-for="@Model.MyStudent.LastName" />
 		<span class="text-danger col-4" asp-validation-for="@Model.MyStudent.LastName"></span>
 	</div>
-	<div class="row m-2">
+	@*
+<div class="row m-2">
 		<label class="col-2" asp-for="@Model.MyStudent.Division"></label>
 		<select class="col-4" asp-for="@Model.MyStudent.Division">
-			@foreach (var elem in Model.Divisions)
+			/* @foreach (var elem in Model.Divisions)
 			{
 				<option value="@elem">@elem</option>
-			}
+			}*/
 		</select>
 	</div>
+	*@
+		
 	<div class="row m-2">
 		<label class="col-2" asp-for="@Model.MyStudent.Division"></label>
 		<select class="col-4" asp-for="@Model.MyStudent.Division"
@@ -29,8 +32,32 @@
 			
 		</select>
 	</div>
+
+	<div class="row m-2">
+		<label class="col-2 text-end" asp-for="@Model.MyStudent.Gender"></label>
+		<div class="col-4">
+			@foreach(var g in Model.Genders)
+			{
+				<input type="radio" asp-for="@Model.MyStudent.Gender"
+				   value="@g" id="Gender@(g)">
+
+				@g <br />
+			}
+		</div>
+	</div>
+
+	<div class="row m-2">
+		<label class="col-2 text-end" asp-for="@Model.MyStudent.Hobbies"></label>
+		<div class="col-4">
+			@for(var i= 0; i < Model.Hobbies.Count; i++)
+			{
+				
+			}
+		</div>
+	</div>
+
 	<div class="row m-2 offset-2">
-		<input class="btn btn-primary" type="submit" value="Zapisz"/>
+		<input class="btn btn-primary" type="submit" value="Zapisz"/> 
 	</div>
 </form>
 
@@ -38,6 +65,6 @@
 {
 	<div>
 		Zapisano: @Model.MyStudent.FirstName @Model.MyStudent.LastName do klasy: 
-		@Model.MyStudent.Division
+		@Model.MyStudent.Division płeć: @Model.MyStudent.Gender
 	</div>
 }

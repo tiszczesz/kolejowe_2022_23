@@ -12,6 +12,8 @@ namespace WebRazorModelSelect.Pages
         public Student MyStudent { get; set; }
         public List<string> Divisions { get; set; }
         public List<SelectListItem> Divisions2 { get; set; }
+		public string[] Genders = new string[] { "Kobieta", "Mê¿czyzna", "Inna" };
+        public List<CheckItem> Hobbies { get; set; }
         public AddStudentModel()
         {
 			Divisions = new List<string>
@@ -27,6 +29,15 @@ namespace WebRazorModelSelect.Pages
                 new SelectListItem{Text="1D" ,Value="1D"}
                 
 			};
+            MyStudent.Hobbies = new List<CheckItem>
+            {
+                new CheckItem{Name = "Sport"},
+                new CheckItem{Name = "Muzyka"},
+                new CheckItem{Name = "Film"},
+                new CheckItem{Name = "Ksi¹¿ka"},
+                new CheckItem{Name = "Taniec"}
+            };
+            
 		}
         public void OnGet()
         {
@@ -45,5 +56,6 @@ namespace WebRazorModelSelect.Pages
 			}
             
         }
+        
     }
 }

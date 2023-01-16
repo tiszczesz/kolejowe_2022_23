@@ -1,0 +1,41 @@
+.container{
+    margin: 0 20px;
+}
+.timer{     
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    background-color: lightgray;
+    padding: 10px;
+    border: solid 1px black;
+    right: -50px;
+    animation: showTimer 2s;
+    animation-fill-mode: forwards;
+    font-weight: bold;
+}
+@keyframes showTimer {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+        height: 0;
+        width: 20px;
+        font-size: smaller;
+        border-radius: 2px;
+    }
+    50%{
+        opacity: 0.3;
+        transform: translateX(-150px);
+        height: 15px;
+        font-size: small;
+        border-radius: 5px;
+        width: 40px;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(-150px);
+        height: 25px;
+        font-size: medium;
+        border-radius: 10px;
+        width: 60px;
+    }
+}
