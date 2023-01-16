@@ -28,3 +28,33 @@
         height: 30px;       
     }
 }
+.card{
+    width: 300px;
+    height: 400px;
+    border: solid 2px black;
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+}
+.year{
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+.month{
+    margin-top: 20px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.date{
+    margin-top: 20px;
+    font-size: 9em;
+    font-weight: bold;
+    color: blueviolet;
+}
+.day{
+    margin-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
