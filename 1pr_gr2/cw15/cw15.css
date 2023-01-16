@@ -12,6 +12,7 @@
     animation: showTimer 2s;
     animation-fill-mode: forwards;
     font-weight: bold;
+    top: 50px;
 }
 @keyframes showTimer {
     0% {
@@ -38,4 +39,34 @@
         border-radius: 10px;
         width: 60px;
     }
+}
+.card{
+    width: 300px;
+    height: 400px;
+    border: solid black 1px;
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+.year{
+    margin-top: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+.date{
+    margin-top: 20px;
+    font-size: 9em;
+    font-weight: bold;
+    color: blue;
+}
+.month{
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.day{
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
 }
