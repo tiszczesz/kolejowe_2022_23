@@ -1,0 +1,30 @@
+.container{
+    margin: 0 30px;
+}
+.timer{
+    position: absolute;
+    border: solid 1px black;
+    background-color: lightgreen;
+    animation-fill-mode: forwards;
+    animation: timerAnim 2s;
+    top: 40px;
+    right: 50px;
+    height: 30px;
+    padding: 10px;
+}
+@keyframes timerAnim {
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+        height: 10px;
+    }
+    50%{
+        opacity: 0.3;
+        transform: translateY(100px);
+        height: 20px;        
+    }
+    100%{
+        opacity: 1;
+        height: 30px;       
+    }
+}
