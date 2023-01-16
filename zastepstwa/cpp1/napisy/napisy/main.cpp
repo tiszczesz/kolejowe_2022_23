@@ -3,7 +3,8 @@
 using namespace std;
 
 void SortStrings(string t[],int size){
-    return;
+    //todo
+
 }
 int main()
 {
