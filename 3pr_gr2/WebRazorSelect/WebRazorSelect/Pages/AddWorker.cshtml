@@ -14,7 +14,7 @@
         <input class="col-4" asp-for="@Model.MyWorker.LastName"/>
         <span class="text-danger col-6" asp-validation-for="@Model.MyWorker.LastName"></span>
     </div>
-     <div class="row m-2">
+    @* <div class="row m-2">
         <label class="col-2" asp-for="@Model.MyWorker.Workplace"></label>
         <select asp-for="@Model.MyWorker.Workplace" class="col-4">
             @foreach (var elem in Model.WorkerPlaces)
@@ -23,10 +23,27 @@
             }
         </select>
     </div>
+    *@
+    <div class="row m-2">
+        <label class="col-2" asp-for="@Model.MyWorker.Workplace"></label>
+        <select asp-for="@Model.MyWorker.Workplace" class="col-4"
+                asp-items="@Model.WorkerPlace2"> </select>   
+    </div>
+
     <div class="row m-2">
         <label class="col-2" asp-for="@Model.MyWorker.Salary"></label>
         <input type="number" class="col-4" asp-for="@Model.MyWorker.Salary"/>
         <span class="text-danger col-6" asp-validation-for="@Model.MyWorker.Salary"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-2" asp-for="@Model.MyWorker.Gender"></label>
+        <div class="col-6">
+       @foreach (string g in Model.Genders)
+       {
+           <input  type="radio" value="@g" asp-for="@Model.MyWorker.Gender">
+           @g <br />
+            }
+       </div>
     </div>
      <div class="row m-2">
         
@@ -39,5 +56,6 @@
     <div>
             Przyjęto nowego pracownika: @Model.MyWorker.FirstName @Model.MyWorker.LastName
             na stanowisko @Model.MyWorker.Workplace z pensją: @Model.MyWorker.Salary
+            płeć pracownika: @Model.MyWorker.Gender
     </div>
 }
