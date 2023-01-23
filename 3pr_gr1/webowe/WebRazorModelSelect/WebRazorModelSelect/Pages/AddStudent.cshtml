@@ -49,9 +49,11 @@
 	<div class="row m-2">
 		<label class="col-2 text-end" asp-for="@Model.MyStudent.Hobbies"></label>
 		<div class="col-4">
-			@for(var i= 0; i < Model.Hobbies.Count; i++)
+			@for(int i= 0; i < Model.MyStudent.Hobbies.Count; i++)
 			{
-				
+				<input type="checkbox" asp-for="@Model.MyStudent.Hobbies[i].IsChecked"/>
+				@Model.MyStudent.Hobbies[i].Name <br />
+				<input type="hidden" asp-for="@Model.MyStudent.Hobbies[i].Name" />
 			}
 		</div>
 	</div>
@@ -66,5 +68,22 @@
 	<div>
 		Zapisano: @Model.MyStudent.FirstName @Model.MyStudent.LastName do klasy: 
 		@Model.MyStudent.Division płeć: @Model.MyStudent.Gender
+		@if ((Model.MyStudent.Hobbies.Where(h => h.IsChecked)).ToList().Count>0)
+		{
+			<ul>
+				@foreach(var h in Model.MyStudent.Hobbies)
+				{
+					if (h.IsChecked)
+					{
+						<li>@h.Name</li>
+					}
+					
+				}
+			</ul>
+		}
+		else
+		{
+			<div>Brak zainteresowań</div>
+		}
 	</div>
 }

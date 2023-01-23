@@ -16,6 +16,10 @@ namespace WebRazorModelSelect.Pages
         public List<CheckItem> Hobbies { get; set; }
         public AddStudentModel()
         {
+            if(MyStudent== null)
+            {
+                MyStudent = new Student();
+            }
 			Divisions = new List<string>
 			{
 				"1A","1B","1C","1PrA","1PrB"
