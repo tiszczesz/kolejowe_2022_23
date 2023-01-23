@@ -71,4 +71,15 @@
             na stanowisko @Model.MyWorker.Workplace z pensją: @Model.MyWorker.Salary
             płeć pracownika: @Model.MyWorker.Gender
     </div>
+    @if((Model.MyWorker.Hobbies.Where(w=>w.IsChecked)).ToList().Count>0){
+        <ul>
+            @foreach(var h in Model.MyWorker.Hobbies){
+                if(h.IsChecked){
+                    <li>@h.Name</li>
+                }
+            }
+        </ul>
+    }else{
+        <div>Brak zainteresowań</div>
+    }
 }
