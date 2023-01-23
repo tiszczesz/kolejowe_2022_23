@@ -21,5 +21,11 @@ namespace WebRazorSelect.Models
         [DisplayName("Pensja")]
         [DataType(DataType.Currency)]
         public double Salary { get; set; }
+
+        [DisplayName("Płeć")]
+        public string Gender { get; set; } = "Kobieta";
+
+         [DisplayName("Zainteresowania")]
+         public List<HobbyItem> Hobbies { get; set; }
     }
 }
