@@ -29,6 +29,10 @@ namespace WebRazorSelect.Pages
                     Text="kierownik",Value="kierownik"}
             };
             Genders = new List<string> { "Kobieta", "Mê¿czyzna", "Inna" };
+            if (MyWorker == null)
+            {
+                MyWorker = new Worker();
+            }
             MyWorker.Hobbies = new List<HobbyItem>
             {
                 new HobbyItem{Name = "Ksi¹¿ki"},
