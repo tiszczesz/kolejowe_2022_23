@@ -1,0 +1,16 @@
+.container{
+    margin: 0 20px;
+}
+.line{
+    margin: 20px;
+}
+form{
+    border: solid 1px grey;
+    padding: 10px;
+}
+label{
+    display: inline-block;
+    width: 250px;
+    text-align: right;
+    margin-right: 4px;
+}

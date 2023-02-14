@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw17.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="line">
+                <label for="firstname">Podaj imię: </label>
+                <input type="text" name="firstname" id="firstname">
+            </div>
+            <div class="line">
+                <label for="lastname">Podaj nazwisko: </label>
+                <input type="text" name="lastname" id="lastname">
+            </div>
+            <div class="line">
+                <label for="birthDay">Podaj datę urodzenia: </label>
+                <input type="date" name="birthDay" id="birthDay">
+            </div>
+            <div class="line">
+                <label for="isOK">Zgoda na przetwarzanie danych: </label>
+                <input type="checkbox" name="isOK" id="isOK">
+            </div>
+            
+            <div class="line">
+                <input type="reset" value="Wyczyść">
+                <input type="button" value="Zapisz" id="run">
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="cw17.js" defer></script>
+</body>
+</html>
