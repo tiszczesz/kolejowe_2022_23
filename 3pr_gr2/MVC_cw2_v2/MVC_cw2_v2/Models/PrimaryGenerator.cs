@@ -14,5 +14,9 @@
             }
             return true;
         }
+        public List<int> GetPrimals(int limit)
+        {
+            return new List<int>();
+        }
     }
 }
