@@ -6,3 +6,12 @@ const todos = [
     "Pograć na konsoli",
     "Pełny relaks..."
 ];
+
+function generTodos(todos){
+    let html = "<ul>";
+    for(let item of todos){
+        html += "<li>"+item+"</li>";
+    }
+    return html + "</ul>";
+}
+document.querySelector("#result").innerHTML = generTodos(todos);
