@@ -4,7 +4,7 @@ const todos = [
     "Zrobić to co zwykle po jedzeniu",
     "Pouczyć się JS",
     "Pograć na konsoli",
-    "Pełny relaks..."
+    "Pełny relaks...","nowy..."
 ];
 
 function generTodos(todos){
