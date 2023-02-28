@@ -19,5 +19,13 @@ namespace Primary.Tests
             var result = pg.IsPrimal(47);
             Assert.IsTrue(result);
         }
+        [TestMethod]
+        public void TestIsPrimal3()
+        {
+            PrimaryGenerator pg = new PrimaryGenerator();
+            int limit = 10;
+            List<int> result = pg.GetPrimals(limit);
+            Assert.IsTrue(result.Count==4);
+        }
     }
 }
