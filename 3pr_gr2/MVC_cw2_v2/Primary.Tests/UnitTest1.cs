@@ -27,5 +27,12 @@ namespace Primary.Tests
             List<int> result = pg.GetPrimals(limit);
             Assert.IsTrue(result.Count==4);
         }
+        public void TestIsPrimal4()
+        {
+            PrimaryGenerator pg = new PrimaryGenerator();
+            int limit = 10;
+            List<int> result = pg.GetPrimals(limit);
+            Assert.IsTrue(result[result.Count-1]==7);
+        }
     }
 }
