@@ -15,3 +15,8 @@ function generTodos(todos){
     return html + "</ul>";
 }
 document.querySelector("#result").innerHTML = generTodos(todos);
+document.querySelector("#addToList").onclick = function(){
+    todos.push(document.querySelector("#addNew").value);
+    document.querySelector("#result").innerHTML = generTodos(todos);
+    document.querySelector("#addNew").value = ""
+};
