@@ -16,7 +16,13 @@
         }
         public List<int> GetPrimals(int limit)
         {
-            return new List<int>();
+            var list = new List<int>();
+           
+            for (int i = 2; i <= limit; i++)
+            {
+                if (IsPrimal(i)) list.Add(i);
+            }
+            return list;
         }
     }
 }
