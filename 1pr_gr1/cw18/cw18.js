@@ -10,7 +10,10 @@ const todos = [
 function generTodos(todos){
     let html = "<ul>";
     for(let item of todos){
-        html += "<li>"+item+"</li>";
+        html += `<li><span>${item}</span>
+                <span><img class='icon' src='media/edit.png' alt='edytuj'></span>
+                <span><img class='icon' src='media/delete.png' alt='usuń'></span>
+                </li>`;
     }
     return html + "</ul>";
 }
