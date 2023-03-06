@@ -1,0 +1,14 @@
+﻿@model MVC_first_v2.Models.MyNWD
+@{
+}
+<form method="post">
+	<input asp-for="A" placeholder="podaj a"/><br />
+	<input asp-for="B" placeholder="podaj b"/><br />
+	<input type="submit" value="Oblicz"/>
+</form>
+
+@if (ViewBag.isPost)
+{
+	<div>No to obliczmy dla @Model.A oraz @Model.B</div>
+}
+

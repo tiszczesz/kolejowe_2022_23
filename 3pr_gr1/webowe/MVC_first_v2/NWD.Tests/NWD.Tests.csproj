@@ -15,4 +15,8 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MVC_first_v2\MVC_first_v2.csproj" />
+  </ItemGroup>
+
 </Project>
