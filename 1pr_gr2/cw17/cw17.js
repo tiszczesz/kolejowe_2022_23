@@ -11,4 +11,8 @@ function generBooks(books){
     }
     return html+"</ul>";
 }
+document.querySelector("#addNew").onclick = function(){
+    books.push(document.querySelector("#newTitle").value);
+    document.querySelector("#list").innerHTML = generBooks(books);
+}
 document.querySelector("#list").innerHTML = generBooks(books);
