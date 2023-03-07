@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVC_cw2_v2.Models;
-using MVC_cw2_v2.ViewModels;
+
 using System.Text;
 
 namespace MVC_cw2_v2.Controllers
@@ -8,26 +8,29 @@ namespace MVC_cw2_v2.Controllers
     public class SecondController : Controller
     {
         public PrimaryGenerator Pg { get; set; }
-        public PrimalsViewModel  PrimalVM { get; set; }
+       
         [HttpGet]
         public IActionResult Index()
         {
             ViewBag.isPost = false;
-            PrimalVM = new PrimalsViewModel();
-            PrimalVM.PG = new PrimaryGenerator();
-            return View(PrimalVM);
+           
+            Pg = new PrimaryGenerator();
+            return View(Pg);
         }
 
         [HttpPost]
-        public IActionResult Index(PrimalsViewModel primalVM)
+        public IActionResult Index(PrimaryGenerator pg)
         {
             ViewBag.isPost = true;
-            primalVM.HtmlTable = "";
-            var ff = ModelState.IsValid;
-            primalVM.HtmlTable = GenerTab(primalVM.PG.N ?? 0, primalVM.PG); 
+            ViewBag.HtmlTable = "";
+            if (ModelState.IsValid)
+            {
+                ViewBag.HtmlTable = GenerTab(pg.N ?? 0, pg);
+            }
+            
             //return View(PrimalVM);
            
-            return View(primalVM);
+            return View(pg);
         }
         public IActionResult GenerTab(){
             int limit = 25;

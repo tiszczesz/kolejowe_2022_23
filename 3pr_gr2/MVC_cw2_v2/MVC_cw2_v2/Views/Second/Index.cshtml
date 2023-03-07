@@ -1,4 +1,4 @@
-﻿@model MVC_cw2_v2.ViewModels.PrimalsViewModel
+﻿@model MVC_cw2_v2.Models.PrimaryGenerator
 @{
     Layout = null;
 }
@@ -15,19 +15,19 @@
     <div class="container">
         <h1>Hello from Second Controller</h1>
         <form method="post">
-            <input asp-for="PG.N" placeholder="Podaj górny zakres" />
+            <input asp-for="N" placeholder="Podaj górny zakres" />
             <input type="submit" value="Generuj"/>
         </form>
     
    @if(ViewBag.isPost){
        <div>Obliczamy .... </div>
-       <div>Liczby pierwsze z przedziału 1..@Model.PG.N</div>
+       <div>Liczby pierwsze z przedziału 1..@Model.N</div>
 
 
-            @foreach (var number in Model.PG.GetPrimals(Model.PG.N ?? 0)) { 
+            @foreach (var number in Model.GetPrimals(Model.N ?? 0)) { 
                 <span>@number </span>
             }
-            <div>@Html.Raw(Model.HtmlTable)</div>
+            <div class="w-75">@Html.Raw(ViewBag.HtmlTable)</div>
         }
    
     </div>
