@@ -3,7 +3,7 @@
     public class PrimaryGenerator
     {
         public int? N { get; set; }
-        public List<int> Primaries { get; set; }
+       
 
         public bool IsPrimal(int a)
         {
