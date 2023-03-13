@@ -40,5 +40,24 @@ namespace sqlite_console.models
             }
             return contacts;
         }
+
+        public void InsertContact(Contact c){
+            using (var conn =
+            new SqliteConnection("Data Source=contacts.db"))
+            {
+                try
+                {
+                    conn.Open();
+                    var command = conn.CreateCommand();
+                    command.CommandText = $"INSERT INTO MyContacts(firstName,lastName,email)"
+                      +$" VALUES('{c.FirstName}','{c.LastName}','{c.Email}')";
+                    command.ExecuteNonQuery(); 
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }
