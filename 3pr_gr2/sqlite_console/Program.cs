@@ -3,4 +3,7 @@ using sqlite_console.models;
 
 Console.WriteLine("Hello, World!");
 ContactRepo repo = new ContactRepo();
-repo.GetContacts();
+var contacts = repo.GetContacts();
+foreach(var c in contacts){
+    Console.WriteLine($"Imię: {c.FirstName} Nazwisko: {c.LastName} Email: {c.Email}");
+}
