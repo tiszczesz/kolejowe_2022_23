@@ -11,4 +11,10 @@
     <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appDb.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
