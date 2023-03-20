@@ -22,11 +22,22 @@ namespace MVC_Mysql_v1.Controllers
             return View(films);
         }
 
-        public IActionResult Privacy()
+        [HttpGet]
+       public IActionResult AddFilm()
         {
             return View();
         }
-
+        [HttpPost]
+        public IActionResult AddFilm(Film film)
+        {
+            if (ModelState.IsValid)
+            {
+                var repo = new FilmRepo(connString);
+                repo.AddFilms(film);
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVC_Mysql_v1.Models
 {
@@ -11,7 +12,10 @@ namespace MVC_Mysql_v1.Models
         public string? Title { get; set; }
 
         [Range(minimum: 0, maximum: 1000)]
+        [DisplayName("Długość filmu")]
         public int? Time { get; set; }
+
+        [DisplayName("Data powstania filmu")]
         public DateTime? Date { get; set; }
     }
 }
