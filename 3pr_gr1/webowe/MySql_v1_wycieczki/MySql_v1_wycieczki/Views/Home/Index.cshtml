@@ -1,8 +1,26 @@
-﻿@{
+﻿@model List<Trip>
+@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h3>Dostępne wycieczki</h3>
+<table class="table table-stripped">
+    <tr>
+        <th>Lp</th>
+        <th>Miejsce</th>
+        <th>Cena</th>
+        <th>Data</th>
+    </tr>
+    @{
+        int lp = 0;
+    }
+    @foreach(var elem in Model)
+    {
+        lp++;
+        <tr>
+            <td>@lp</td>
+            <td>@elem.Place</td>
+            <td>@elem.Price</td>
+            <td>@elem.Date</td>
+        </tr>
+    }
+</table>

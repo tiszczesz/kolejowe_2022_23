@@ -7,15 +7,21 @@ namespace MySql_v1_wycieczki.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        TripRepo tripRepo;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,
+                 IConfiguration configuration)
         {
+            var connString = configuration.GetConnectionString("myConn");
+            tripRepo = new TripRepo(connString);
+
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var trips = tripRepo.GetAll();
+            return View(trips);
         }
 
         public IActionResult Privacy()
