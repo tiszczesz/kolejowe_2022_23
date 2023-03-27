@@ -23,7 +23,16 @@ namespace MySql_v1_wycieczki.Controllers
             var trips = tripRepo.GetAll();
             return View(trips);
         }
-
+        [HttpGet]
+        public IActionResult AddTrip()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddTrip(Trip trip)
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

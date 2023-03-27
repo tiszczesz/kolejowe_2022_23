@@ -36,5 +36,17 @@ namespace MySql_v1_wycieczki.Models
 
             return tripList;
         }
+
+        public void InsertTrip(Trip trip)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                MySqlCommand command = conn.CreateCommand();
+                command.CommandText = "INSERT INTO trps(place,price,date) "
+                    +$"VALUES()";
+               
+            }
+        }
     }
 }
