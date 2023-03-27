@@ -1,0 +1,25 @@
+﻿@model List<Film>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<table class="table table-stripped">
+    <tr>
+        <th>Lp</th>
+        <th>Tytuł</th>
+        <th>Czas</th>
+        <th>Data wydania</th>
+    </tr>
+    @{
+        int lp = 0;
+    }
+    @foreach (var item in Model)
+    {
+        lp++;
+        <tr>
+            <td>@lp</td>
+            <td>@item.Title</td>
+            <td>@item.Time</td>
+            <td>@item.Date?.ToShortDateString()</td>
+        </tr>
+    }
+</table>
