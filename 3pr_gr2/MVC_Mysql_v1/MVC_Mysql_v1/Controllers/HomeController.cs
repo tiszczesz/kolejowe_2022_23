@@ -50,7 +50,12 @@ namespace MVC_Mysql_v1.Controllers
         [HttpPost]
         public IActionResult Update(int id, Film film)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                //todo
+                return RedirectToAction("Index");
+            }
+            return View(film);
         }
 
         public IActionResult Delete(int id)
