@@ -86,5 +86,18 @@ namespace MVC_Mysql_v1.Models
             }
             return film;
         }
+        public void UpdateFilm(int id,Film film)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                MySqlCommand cmd = conn.CreateCommand();
+                string? formatForMySql = film.Date?.ToString("yyyy-MM-dd HH:mm:ss");
+                cmd.CommandText = 
+                $"UPDATE films SET title='{film.Title}',time={film.Time}," +
+                   $"date='{formatForMySql}', time={film.Time} WHERE id={id}";
+                cmd.ExecuteNonQuery();               
+            }
+        }
     }
 }

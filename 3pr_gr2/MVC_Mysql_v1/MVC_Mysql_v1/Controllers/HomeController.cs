@@ -52,7 +52,7 @@ namespace MVC_Mysql_v1.Controllers
         {
             if (ModelState.IsValid)
             {
-                //todo
+                _repo.UpdateFilm(id, film);
                 return RedirectToAction("Index");
             }
             return View(film);
