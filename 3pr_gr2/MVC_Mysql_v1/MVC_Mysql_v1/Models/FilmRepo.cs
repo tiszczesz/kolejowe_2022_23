@@ -51,5 +51,40 @@ namespace MVC_Mysql_v1.Models
             }
            
         }
+        public void DeleteFilms(int id)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                MySqlCommand cmd = conn.CreateCommand();                
+                cmd.CommandText = $"DELETE FROM films WHERE id={id}";                  
+                cmd.ExecuteNonQuery();
+            }
+
+        }
+
+        public Film? GetById(int id)
+        {
+            Film? film=null;
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = $"SELECT * FROM films WHERE id={id}";
+                MySqlDataReader rd = cmd.ExecuteReader();
+                if (rd.HasRows)
+                {
+                    rd.Read();
+                    film = new Film
+                    {
+                        Id = rd.GetInt32(0),
+                        Title = rd.GetString(1),
+                        Time = rd.GetInt32(2),
+                        Date = rd.GetDateTime(3)
+                    };
+                }
+            }
+            return film;
+        }
     }
 }

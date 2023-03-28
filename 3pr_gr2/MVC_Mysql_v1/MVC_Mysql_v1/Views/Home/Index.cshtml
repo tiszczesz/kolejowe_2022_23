@@ -8,6 +8,7 @@
         <th>Tytuł</th>
         <th>Czas</th>
         <th>Data wydania</th>
+        <th>Operacje</th>
     </tr>
     @{
         int lp = 0;
@@ -20,6 +21,12 @@
             <td>@item.Title</td>
             <td>@item.Time</td>
             <td>@item.Date?.ToShortDateString()</td>
+            <td>
+                <a class="btn btn-primary" 
+                asp-action="update" asp-route-id="@item.Id">Edytuj</a>
+                <a class="btn btn-danger" 
+                asp-action="delete" asp-route-id="@item.Id">Usuń</a>
+            </td>
         </tr>
     }
 </table>
