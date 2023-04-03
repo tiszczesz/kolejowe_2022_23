@@ -31,6 +31,11 @@ namespace MySql_v1_wycieczki.Controllers
         [HttpPost]
         public IActionResult AddTrip(Trip trip)
         {
+            if (ModelState.IsValid)
+            {
+                tripRepo.InsertTrip(trip);
+                return RedirectToAction("Index");
+            }
             return View();
         }
         public IActionResult Privacy()

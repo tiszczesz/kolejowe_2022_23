@@ -13,7 +13,8 @@ namespace MySql_v1_wycieczki.Models
         public decimal? Price { get; set; }
 
         [DisplayName("Data wycieczki")]
-        public DateOnly? Date { get; set; }
+        public DateTime? Date { get;  set ; }
+        
 
     }
 }

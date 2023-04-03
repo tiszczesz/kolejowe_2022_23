@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace MySql_v1_wycieczki.Models
 {
@@ -22,13 +23,13 @@ namespace MySql_v1_wycieczki.Models
                 {
                     while(rd.Read())
                     {
-                        DateOnly? date = DateOnly.FromDateTime(rd.GetDateTime(3));                            
+                                                
                         tripList.Add(new Trip
                         {
                             Id = rd.GetInt32(0),
                             Place = rd.GetString(1),
                             Price = rd.GetDecimal(2),
-                            Date = date
+                            Date = rd.GetDateTime(3)
                         }) ;
                     }
                 }
@@ -43,9 +44,11 @@ namespace MySql_v1_wycieczki.Models
             {
                 conn.Open();
                 MySqlCommand command = conn.CreateCommand();
-                command.CommandText = "INSERT INTO trps(place,price,date) "
-                    +$"VALUES()";
-               
+                string? formatForMySql = trip.Date?.ToString("yyyy-MM-dd HH:mm:ss");
+                string? priceInfo = trip.Price?.ToString(CultureInfo.InvariantCulture);
+                command.CommandText = "INSERT INTO trips(place,price,date) "
+                    +$"VALUES('{trip.Place}','{ priceInfo}','{formatForMySql}')";
+                command.ExecuteNonQuery();
             }
         }
     }

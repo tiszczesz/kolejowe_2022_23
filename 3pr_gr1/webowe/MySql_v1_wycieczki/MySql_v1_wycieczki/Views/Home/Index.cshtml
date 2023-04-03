@@ -20,7 +20,7 @@
             <td>@lp</td>
             <td>@elem.Place</td>
             <td>@elem.Price</td>
-            <td>@elem.Date</td>
+            <td>@elem.Date?.ToShortDateString()</td>
         </tr>
     }
 </table>
