@@ -5,5 +5,6 @@
 4. Utworzenie użytkownika z pełnymi prawami dla bazy danych word
 5. Uruchomienie z przeglądarki localhost/wordpress
 6. Zgodnie z kolejnymi zaleceniami:
-    a. utworzenie użytkownika i nazwy strony z hasłem
+
+    a. utworzenie użytkownika i nazwy strony z hasłem    
     np admin hasło admin ....
