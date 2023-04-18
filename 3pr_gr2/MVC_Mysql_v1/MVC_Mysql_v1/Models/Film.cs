@@ -12,8 +12,9 @@ namespace MVC_Mysql_v1.Models
         public string? Title { get; set; }
 
         [Required(ErrorMessage = "Musisz podać czas w minutach")]
-        [Range(minimum: 0, maximum: 1000)]
+        [Range(minimum: 0, maximum: 1000,ErrorMessage = "Czas filmu między 0 a 1000 minut")]
         [DisplayName("Długość filmu")]
+       
         public int? Time { get; set; }
 
         [Required(ErrorMessage = "Musisz podać datę")]
