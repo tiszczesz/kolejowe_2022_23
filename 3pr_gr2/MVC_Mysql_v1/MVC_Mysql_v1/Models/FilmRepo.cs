@@ -23,13 +23,20 @@ namespace MVC_Mysql_v1.Models
                 {
                     while (rd.Read())
                     {
-                        films.Add(new Film
+                        try
                         {
-                            Id = rd.GetInt32(0),
-                            Title = rd.GetString(1),
-                            Time = rd.GetInt32(2),
-                            Date = rd.GetDateTime(3),
-                        });
+                      films.Add(new Film
+                                            {
+                                                Id = rd.GetInt32(0),
+                                                Title = rd.GetString(1),
+                                                Time = rd.GetInt32(2),
+                                                Date = rd.GetDateTime(3),
+                                            });
+                        }catch(Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                      
                     }
                 }
             }

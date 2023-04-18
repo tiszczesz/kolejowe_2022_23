@@ -11,10 +11,12 @@ namespace MVC_Mysql_v1.Models
         [Display(Name = "Tytuł filmu")]
         public string? Title { get; set; }
 
+        [Required(ErrorMessage = "Musisz podać czas w minutach")]
         [Range(minimum: 0, maximum: 1000)]
         [DisplayName("Długość filmu")]
         public int? Time { get; set; }
 
+        [Required(ErrorMessage = "Musisz podać datę")]
         [DisplayName("Data powstania filmu")]
         public DateTime? Date { get; set; }
     }
