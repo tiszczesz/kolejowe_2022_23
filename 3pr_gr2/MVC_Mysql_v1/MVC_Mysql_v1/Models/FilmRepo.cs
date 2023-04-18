@@ -51,6 +51,7 @@ namespace MVC_Mysql_v1.Models
                 conn.Open();
                 MySqlCommand cmd = conn.CreateCommand();
                 string? formatForMySql = film.Date?.ToString("yyyy-MM-dd HH:mm:ss");
+                formatForMySql = formatForMySql ?? "2022-09-09";
                 cmd.CommandText = $"INSERT INTO films(title,time,date)"
                     +$"VALUES('{film.Title}','{film.Time}','{formatForMySql}')";
                 cmd.ExecuteNonQuery();
